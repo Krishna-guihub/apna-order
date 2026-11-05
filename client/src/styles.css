@@ -1,0 +1,6 @@
+/* Apna Order — global stylesheet entry point.
+   Sections are split for readability and compiled together by Vite. */
+@import './styles/base.css';
+@import './styles/customer.css';
+@import './styles/staff.css';
+@import './styles/admin.css';
