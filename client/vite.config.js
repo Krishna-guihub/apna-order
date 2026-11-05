@@ -1,3 +1,4 @@
+
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig, loadEnv } from 'vite';
@@ -11,7 +12,12 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+
+    // GitHub Pages configuration
+    base: '/apna-order/',
+
     envDir: path.resolve(currentDir, '..'),
+
     server: {
       port: 5173,
       host: '0.0.0.0',
@@ -22,13 +28,16 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+
     preview: {
       port: 4173,
       host: '0.0.0.0',
     },
+
     build: {
       outDir: 'dist',
       sourcemap: false,
     },
   };
 });
+
